@@ -2,9 +2,9 @@
 # But make sure to use the correct version of Java
 FROM eclipse-temurin:17-jre-alpine
 
-RUN apt-get update && \
-    apt-get install -y docker.io && \
-    apt-get clean
+#RUN apt-get update && \
+ #   apt-get install -y docker.io && \
+ #   apt-get clean
 
 # Simply the artifact path
 ARG artifact=target/spring-boot-web.jar

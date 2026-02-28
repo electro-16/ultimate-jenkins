@@ -3,7 +3,7 @@
 # Base image: Maven + Java 17
 
 
-FROM eclipse-temurin:17-jre-alpine
+FROM 3.9.12-eclipse-temurin-17-alpine
 
 #RUN apt-get update && \
  #   apt-get install -y docker.io && \

@@ -3,7 +3,7 @@
 # Base image: Maven + Java 17
 
 
-FROM electro16/maven-docker:v2
+FROM electro16/maven-docker:v1
 
 #RUN apt-get update && \
  #   apt-get install -y docker.io && \

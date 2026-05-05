@@ -2,8 +2,8 @@ pipeline {
   agent {
     docker {
       image 'electro16/maven-docker:v1'
-      args '-u 110:110'
-      args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      //args '-u 110:110'
+      args '-u 110:110 -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
   stages {

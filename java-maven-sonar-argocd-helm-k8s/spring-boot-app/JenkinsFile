@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        //sh 'echo passed'
-        git branch: 'main', url: 'https://github.com/electro-16/ultimate-jenkins.git'
+        sh 'echo passed'
+        //git branch: 'main', url: 'https://github.com/electro-16/ultimate-jenkins.git'
       }
     }
     stage('Build and Test') {

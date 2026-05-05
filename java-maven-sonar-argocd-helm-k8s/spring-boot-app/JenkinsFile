@@ -54,8 +54,6 @@ stage('Build and Push Docker Image') {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    chown -R root:root java-maven-sonar-argocd-helm-k8s
-                    chmod -R 770 java-maven-sonar-argocd-helm-k8s
                     git config --global user.email "sanketgiram2001@gmail.com"
                     git config --global user.name "electro-16"
                     BUILD_NUMBER=${BUILD_NUMBER}

@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'electro16/maven-docker:v1'
+      image 'electro16/maven-docker:v2'
       //args '-u 110:110'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/electro-16/ultimate-jenkins.git'
+        //sh 'echo passed'
+        git branch: 'main', url: 'https://github.com/electro-16/ultimate-jenkins.git'
       }
     }
     stage('Build and Test') {

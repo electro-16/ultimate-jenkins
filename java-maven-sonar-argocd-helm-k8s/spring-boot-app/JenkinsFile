@@ -57,7 +57,7 @@ stage('Build and Push Docker Image') {
                 sh '''
                     git config --global user.email "sanketgiram2001@gmail.com"
                     git config --global user.name "electro-16"
-                    //git config --global --add safe.directory /var/lib/jenkins/workspace/ultimate-devops
+                    git config --global --add safe.directory /var/lib/jenkins/workspace/ultimate-devops
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml

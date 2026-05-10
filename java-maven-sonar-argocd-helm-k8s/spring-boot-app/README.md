@@ -64,6 +64,12 @@ unzip *
 chown -R sonarqube:sonarqube /opt/sonarqube
 chmod -R 775 /opt/sonarqube
 cd /opt/sonarqube/bin/linux-x86-64
+
+#As the sonar runs on java 17 and jenkins required java 21. so change the sonar java path in sonar.sh script
+nano sonar.sh
+add the below line on the top
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
 ./sonar.sh start
 ```
 
